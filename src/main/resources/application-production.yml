@@ -1,0 +1,16 @@
+spring:
+  thymeleaf:
+    mode: HTML5
+logging:
+  level:
+    org:
+      springframework: error
+server:
+  port: ${PORT:5000}
+
+db:
+  url: ${JDBC_DATABASE_URL}
+  username: ${JDBC_DATABASE_USERNAME}
+  password: ${JDBC_DATABASE_PASSWORD}
+
+

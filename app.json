@@ -1,0 +1,7 @@
+{
+  "name": "heroku-spring-boot-mybatis-mysql-flyway",
+  "description": "heroku spring boot demo.",
+  "addons": [
+    "cleardb:ignite"
+  ]
+}

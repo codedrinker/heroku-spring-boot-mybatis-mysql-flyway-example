@@ -1,0 +1,1 @@
+web: java -jar -Dspring.profiles.active=production target/heroku-spring-boot-mybatis-mysql-flyway-1.0.0.jar

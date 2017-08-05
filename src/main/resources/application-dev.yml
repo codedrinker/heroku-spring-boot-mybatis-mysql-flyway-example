@@ -1,0 +1,16 @@
+spring:
+  thymeleaf:
+    mode: HTML5
+logging:
+  level:
+    org:
+      springframework: debug
+server:
+  port: ${port:8080}
+
+db:
+  url: jdbc:mysql://localhost:3306/codedrinker?allowMultiQueries=true
+  username: root
+  password: root
+
+
