@@ -1,0 +1,9 @@
+CREATE TABLE admin
+(
+  id INT(10) unsigned PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  username VARCHAR (50) NOT NULL,
+  password VARCHAR (50) NOT NULL,
+  gmt_created BIGINT(20) DEFAULT '0' NOT NULL,
+  gmt_modified BIGINT(20) DEFAULT '0' NOT NULL,
+  status TINYINT(1) DEFAULT '1' NOT NULL,
+);
