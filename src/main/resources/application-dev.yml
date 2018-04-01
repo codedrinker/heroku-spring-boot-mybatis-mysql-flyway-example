@@ -4,13 +4,20 @@ spring:
 logging:
   level:
     org:
-      springframework: debug
+      springframework: error
 server:
   port: ${port:8080}
 
-db:
-  url: jdbc:mysql://localhost:3306/codedrinker?allowMultiQueries=true
-  username: root
-  password: root
+# mysql
+#db:
+#  url: jdbc:mysql://localhost:3306/codedrinker?allowMultiQueries=true
+#  username: root
+#  password: root
 
+# h2
+db:
+  url: jdbc:h2:~/heroku-sample
+  username: sa
+  password: sa
+  driver: org.h2.Driver
 

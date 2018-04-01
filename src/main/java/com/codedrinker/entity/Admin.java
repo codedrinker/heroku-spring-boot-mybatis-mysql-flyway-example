@@ -9,7 +9,7 @@ import com.alibaba.fastjson.JSON;
 public class Admin {
     private Integer id;
     private String username;
-    private Integer password;
+    private String password;
     private Long gmtCreated;
     private Long gmtModified;
     private Integer status = 1;
@@ -30,11 +30,11 @@ public class Admin {
         this.username = username;
     }
 
-    public Integer getPassword() {
+    public String getPassword() {
         return password;
     }
 
-    public void setPassword(Integer password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 

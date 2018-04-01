@@ -5,7 +5,8 @@ application on [Heroku](http://heroku.com). Integration [MySQL](https://devcente
 ## Running the application
 To run the application from your IDE, simply run the `com.codedrinker.Application` class as
 a Java Application with `dev` [profile](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-profiles.html).  
-<img src="http://www.majiang.life/repository/asserts/spring-profile.png" width="350">  
+<img src="http://www.majiang.life/repository/asserts/spring-profile.png" width="350">
+If does not work, input `-Dspring.profiles.active=dev` to VM Options.
 Also you can start from the termial using maven with `mvn spring-boot:run -Dspring.profiles.active=dev`  
 
 To run the application on Heroku is automated. We just get the `Procfic` for Heroku.

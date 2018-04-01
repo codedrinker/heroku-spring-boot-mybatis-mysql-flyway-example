@@ -31,6 +31,7 @@ public class AdminServiceImpl implements AdminService {
     @Override
     public ResponseDTO update(AdminDTO adminDTO) {
         Admin admin = AdminRequestBuilder.build(adminDTO);
+        admin.setGmtModified(System.currentTimeMillis());
         adminDao.update(admin);
         return ResponseDTO.ok(admin);
     }
@@ -38,6 +39,8 @@ public class AdminServiceImpl implements AdminService {
     @Override
     public ResponseDTO select(Integer id) {
         Admin admin = adminDao.select(id);
+        if (admin == null)
+            return ResponseDTO.notFound();
         return ResponseDTO.ok(admin);
     }
 
@@ -50,6 +53,9 @@ public class AdminServiceImpl implements AdminService {
     @Override
     public ResponseDTO delete(Integer id) {
         Integer delete = adminDao.delete(id);
+        if (delete == 0) {
+            return ResponseDTO.notFound();
+        }
         return ResponseDTO.ok(delete);
     }
 }
