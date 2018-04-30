@@ -3,6 +3,11 @@ This is a small demo application for showing how to run a [Spring Boot](http://p
 application on [Heroku](http://heroku.com). Integration [MySQL](https://devcenter.heroku.com/articles/cleardb), [MyBatis](http://www.mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/#), [Flyway Database Migration](https://flywaydb.org/), [Logging](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-logging.html), [Spring Profiles](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-profiles.html) etc.
 
 ## Running the application
+Before starting the application you should execute the following commands to change to default db to MySQL.
+```
+heroku addons:destroy heroku-postgresql
+heroku addons:create cleardb:ignite
+```
 To run the application from your IDE, simply run the `com.codedrinker.Application` class as
 a Java Application with `dev` [profile](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-profiles.html).  
 <img src="http://www.majiang.life/repository/asserts/spring-profile.png" width="350">
