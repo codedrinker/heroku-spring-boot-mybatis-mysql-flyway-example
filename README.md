@@ -19,6 +19,30 @@ To run the application on Heroku is automated. We just get the `Procfic` for Her
 web: java -jar -Dspring.profiles.active=production target/heroku-spring-boot-mybatis-mysql-flyway-1.0.0.jar
 ```
 
+## 中文说明
+当前项目是修改之前 Heroku 官方的示例，添加了 Spring，MyBatis，Druid，Flyway，Lombok等方便的功能。  
+使用过程中，克隆代码以后需要修改一些地方
+
+### 修改
+```bash
+V1__Create_admin_table.sql 内容修改
+index.html 文案
+app.json 内容和描述
+pom.xml 项目名称和ID
+Procfile 对应的项目名称
+application-dev.yml 对应的H2地址
+Readme 相关内容
+```
+### 运行
+直接按照下图运行即可  
+<img src="http://www.majiang.life/repository/asserts/spring-profile.png" width="350">  
+或者使用`-Dspring.profiles.active=dev` 参数配置。
+如果使用 jar 的方式运行使用如下命令
+
+```
+java -jar -Dspring.profiles.active=production target/heroku-spring-boot-mybatis-mysql-flyway-1.0.0.jar
+```
+
 ## License
 
 The MIT License (MIT)
